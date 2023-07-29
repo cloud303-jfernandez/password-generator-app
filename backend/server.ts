@@ -4,12 +4,17 @@
 
 import express from 'express';
 import { exec } from 'child_process';
+import path from 'path';
 
 // Initializing an Express application
 // Use a middleware to parse incoming requests with JSON payloads.
 
 const app = express();
 app.use(express.json());
+
+// Defined frontend path
+
+app.use(express.static(path.join(__dirname, '../public')));
 
 // Defined a POST endpoint at path '/generate'. 
 // Endpoint will generate a new password when it receives a POST request. 

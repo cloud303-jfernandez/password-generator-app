@@ -18,6 +18,7 @@ RUN npm install
 
 COPY ./backend .
 COPY ./password_generator.py ..
+COPY ./frontend/index.html ../public/index.html
 
 # Make port 3000 available outside the container
 
